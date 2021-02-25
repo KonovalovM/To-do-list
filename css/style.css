@@ -1,0 +1,258 @@
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    height: 100%;
+    background-image: url("../images/fon.jfif");
+    background-size: contain;
+}
+
+/*----------------
+    Header
+------------------*/
+#head {
+    width: 100%;
+    height: 70px;
+    background: linear-gradient(to top right, purple, crimson, orangered, gold);
+    border-radius: 20px;
+    text-shadow: black 4px 2px 2px;
+    box-shadow: black 10px 7px 50px;
+}
+
+#logo {
+    width: 80px;
+    position: relative;
+}
+
+#logo img {
+    width: 100%;
+    position: absolute;
+    left: 40%;
+}
+
+#logo span {
+    width: max-content;
+    font-size: 30px;
+    position: absolute;
+    top: 17px;
+    left: 120px;
+    color: aqua;
+}
+
+#menu {
+    float: right;
+    height: 100%;
+}
+
+#menu a {
+    color: aliceblue;
+    text-decoration: none;
+    font-size: 27px;
+    height: calc(100% - 16px);
+    display: block;
+    float: left;
+    padding: 16px 10px 0;
+}
+
+#menu a:hover {
+    background: red;
+}
+
+/*----
+AddTask
+-----*/
+#addTask {
+    height: 30px;
+    width: 100%;
+    padding-top: 35px;
+    padding-left: 2%;
+}
+
+#addTask input {
+    background: lightgrey;
+    border: none;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    float: left;
+    margin-right: 10px;
+    width: calc(75% - 20px);
+    outline: none;
+    padding: 0 7%;
+}
+
+#addTask button {
+    width: 30px;
+    height: 30px;
+    background: white;
+    margin: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 0;
+    box-shadow: 1px 1px 1px
+}
+
+#addTask button img {
+    width: 100%;
+    height: 100%;
+}
+
+/*---------------------------------
+List task
+----------------------------------*/
+#lists {
+    width: 35%;
+    height: 100%;
+    float: left;
+    background-image: url(../images/fon_list.png);
+    background-size: cover;
+}
+
+#list ul {
+    padding-left: initial;
+}
+
+#list ul li {
+    min-height: 50px;
+    padding: 10px;
+}
+
+#list ul li a {
+    text-decoration: none;
+    color: red;
+    width: 80%;    
+}
+
+#list ul .recycle {
+    width: 38px;
+    height: 30px;
+    float: right;
+    margin-right: 0px;
+}
+
+#list ul .recycle img {
+    position: inherit;
+    width: 100%;
+    height: 100%;
+}
+
+#list h2 {
+    margin-left: 10%;
+    margin: auto;
+    overflow-wrap: anywhere;
+}
+
+h2:hover {
+    background: white;
+}
+#sort {
+    display: flex;
+    justify-content: space-between;
+}
+
+/*------------
+   Scroll
+------------*/
+#list::-webkit-scrollbar-track,
+#tasks::-webkit-scrollbar-track,
+.modal .content::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(255, 204, 0, 1);
+    ;
+    background-color: lightgrey;
+}
+
+#list::-webkit-scrollbar,
+#tasks::-webkit-scrollbar,
+.modal .content::-webkit-scrollbar {
+    width: 10px;
+    background-color: gold;
+}
+
+#list::-webkit-scrollbar-thumb,
+#tasks::-webkit-scrollbar-thumb,
+.modal .content::-webkit-scrollbar-thumb {
+    background-color: purple;
+    background-image: -webkit-linear-gradient(90deg,
+            rgba(255, 255, 255, 1) 0%,
+            rgba(255, 204, 0, 1) 15%,
+            transparent 100%,
+            rgba(255, 204, 0, 1) 75%,
+            transparent)
+}
+
+/*-----------------------------------
+Tsks
+-----------------------------------*/
+#content {
+    width: 85%;
+    height: calc(100% - 90px);
+    margin: 0 auto;
+    background: white;
+}
+
+#tasks {
+    float: right;
+    width: calc(100% - 35%);
+    height: 100%;
+    overflow-y: auto;
+}
+
+#tasks ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#form {
+    height: calc(20% - 62px);
+    padding: 20px;
+}
+
+#form textarea {
+    width: -webkit-fill-available;
+    height: 150px;
+}
+#form h3 {
+    margin: 10px;
+}
+
+.btn {
+    left: 100%;
+    position: sticky;
+    display: inline-block;
+    width: 6em;
+    height: 2.5em;
+    line-height: 2.4em;
+    vertical-align: middle;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    color: #000;
+    outline: none;
+    border: 1px solid rgba(110,121,128,.8);
+    border-top-color: rgba(0,0,0,.3);
+    border-radius: 5px;
+    background: rgb(206, 220, 231) linear-gradient(rgb(206,220,231), rgb(89,106,114));
+    box-shadow:
+    0 -1px rgba(10,21,28,.9) inset,
+    0 1px rgba(255,255,255,.5) inset;
+}
+.btn:hover {
+  background: linear-gradient(#d2dfea, #71828c);
+}
+.btn:active {
+  line-height: 2.6em;
+  background: linear-gradient(#bac6cf, #c5d3de 20%, #71828c);
+  box-shadow: 0 -1px rgba(255,255,255,.4) inset;
+}
+.btn:before {
+  content: "";
+  position: absolute;
+  top: -10px; right: -10px; bottom: -10px; left: -10px;
+  z-index: -1;
+  border-radius: 8px;
+  background: linear-gradient(rgba(200,200,200,.5), rgba(240,240,240,.5));
+}
